@@ -1,9 +1,21 @@
 package com.spring.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import sun.util.calendar.BaseCalendar.Date;
 
+
+@Entity
+@Table(name="EMPLOI")
 public class Emlpoi {
-	
+    @Id
+    @Column(name="id")
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private int id ;
 	private int semaine ;
 	private Date date;
