@@ -1,5 +1,10 @@
 package com.spring.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="UTILISATEUR")
 public class Enseignant extends Utilisateur {
 	
 	
