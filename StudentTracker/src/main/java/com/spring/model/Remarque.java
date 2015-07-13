@@ -6,41 +6,40 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-/*to be pushed*/
+
 @Entity
-@Table(name="CLASSE")
-public class Classe {
-    @Id
-    @Column(name="id")
-    @GeneratedValue(strategy=GenerationType.AUTO)
+@Table(name="REMARQUE")
+public class Remarque {
+	
+	     @Id  
+	    @Column(name="id")
+	    @GeneratedValue(strategy=GenerationType.AUTO)
 	private int id ;
-	private String nomclasse ;
+	private String text ;
 	
 	
-	public Classe(String nomclasse) {
+	
+	
+	
+	public Remarque(String text) {
 		super();
-		this.nomclasse = nomclasse;
+		this.text = text;
 	}
-
-
+	
+	
 	public int getId() {
 		return id;
 	}
-
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
-	public String getNomclasse() {
-		return nomclasse;
+	public String getText() {
+		return text;
 	}
-
-
-	public void setNomclasse(String nomclasse) {
-		this.nomclasse = nomclasse;
+	public void setText(String text) {
+		this.text = text;
 	}
+	
 	
 	
 
